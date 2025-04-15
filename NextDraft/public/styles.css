@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-weight: bold; /* Bold header for emphasis */
+}
+
+/* Player Form Styles */
+#player-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#player-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#player-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for button */
+}
+
+#player-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Player List Styles */
+#player-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.player {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.player:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red; /* Red color for error messages */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 10px 0; /* Space around error messages */
+}
+
+/* Loading Indicator Styles */
+#loading {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    padding-top: 20%; /* Center vertically */
+    font-size: 24px; /* Larger font size for loading text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #player-form, #player-list {
+        width: 90%;
+    }
+
+    #player-form input, #player-form button {
+        font-size: 14px;
+    }
+} 
+
+/* Additional Styles for Accessibility */
+input:focus, button:focus {
+    outline: 2px solid #3498db; /* Outline for focused elements */
+    outline-offset: 2px; /* Space between outline and element */
+}

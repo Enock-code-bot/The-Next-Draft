@@ -1,0 +1,46 @@
+<!-- public/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <h1>TheNextDraft</h1>
+    
+    <div id="loading" style="display: none;">Loading...</div> <!-- Loading indicator -->
+
+    <div id="registration-form"> <!-- Container for the registration form -->
+        <h2>Admin Registration</h2> <!-- Header for the registration form -->
+        <input type="text" id="reg-username" placeholder="Username" required aria-label="Username"> <!-- Input for registration username -->
+        <input type="password" id="reg-password" placeholder="Password" required aria-label="Password"> <!-- Input for registration password -->
+        <button onclick="register()">Register</button> <!-- Button to trigger registration function -->
+    </div>
+
+    <div id="login-form" style="display: none;"> <!-- Container for the login form, hidden by default -->
+        <h2>Admin Sign In</h2> <!-- Header for the login form -->
+        <input type="text" id="username" placeholder="Username" required aria-label="Username"> <!-- Input for username -->
+        <input type="password" id="password" placeholder="Password" required aria-label="Password"> <!-- Input for password -->
+        <button onclick="login()">Login</button> <!-- Button to trigger login function -->
+    </div>
+    
+    <div id="message" class="error-message" style="display: none;"></div> <!-- Container for displaying messages -->
+
+    <div id="player-management" style="display: none;"> <!-- Player management section, hidden by default -->
+        <h2>Player Management</h2> <!-- Header for player management -->
+        <div id="player-form">
+            <input type="text" id="name" placeholder="Player Name" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="number" id="points" placeholder="Points" required>
+            <input type="number" id="rebounds" placeholder="Rebounds" required>
+            <input type="number" id="assists" placeholder="Assists" required>
+            <button onclick="addPlayer()">Add Player</button> <!-- Button to add a player -->
+        </div>
+        <div id="player-list"></div> <!-- Container for displaying players -->
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
